@@ -9,8 +9,8 @@
         fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
+                console.log(data); 
                 comments.data = data;
-                comments.data.reverse();
         });
     });
 
@@ -38,6 +38,8 @@
             comment.value = "";
             //push comment to array
             comments.data.push(data);
+            //push comment to top of array
+            comments.data.reverse();
 
     }
 </script>
