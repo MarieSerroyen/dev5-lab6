@@ -2,6 +2,7 @@
     import {ref, onMounted, reactive} from 'vue'
 
     let comments = reactive({data: []});
+    let comment = ref("");
 
     onMounted(() => {
         const apiUrl = "https://lab5-p379.onrender.com/api/v1/messages/";
@@ -10,7 +11,11 @@
             .then(data => {
                 comments.data = data;
         });
-    })
+    });
+
+    const addComment = () => {
+        console.log(comment.value);
+    }
 </script>
 
 <template>
@@ -23,8 +28,8 @@
     </ul>
   </div>
   <div class="input-field">
-    <input type="text" placeholder="Add comment">
-    <button>ADD</button>
+    <input type="text" placeholder="Add comment" v-model="comment">
+    <button @click="addComment">ADD</button>
   </div>
 </template>
 
