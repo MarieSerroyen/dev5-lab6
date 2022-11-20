@@ -1,12 +1,14 @@
 <script setup>
   import VideoPlayer from './components/VideoPlayer.vue'
   import VideoDetails from './components/VideoDetails.vue'
+  import VideoComments from './components/VideoComments.vue'
 </script>
 
 <template>
   <div class="app">
     <VideoPlayer/>
     <VideoDetails/>
+    <VideoComments/>
   </div>
 </template>
 
