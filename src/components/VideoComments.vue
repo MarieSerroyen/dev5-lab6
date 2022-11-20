@@ -2,6 +2,15 @@
     import {ref, onMounted} from 'vue'
 
     let user = "Marie"
+
+    onMounted(() => {
+        const apiUrl = "https://lab5-p379.onrender.com/api/v1/messages/";
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+        });
+    })
 </script>
 
 <template>
