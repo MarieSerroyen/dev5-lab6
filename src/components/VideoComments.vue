@@ -30,8 +30,8 @@
             .then(response => response.json())
             .then(data => {
                 comments.data.push({
-                    user: comments.data.user,
-                    text: comments.data.text
+                    user: data.data.user,
+                    text: data.data.text
                 });
             });
             //clear input field

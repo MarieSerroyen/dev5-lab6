@@ -17,6 +17,6 @@
 <style scoped>
   .app {
     display: grid;
-    grid-template-columns: 8fr 4fr;
+    grid-template-columns: 6fr 4fr;
   }
 </style>
