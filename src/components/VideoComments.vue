@@ -36,6 +36,8 @@
             });
             //clear input field
             comment.value = "";
+            //push comment to array
+            comments.data.push(data);
 
     }
 </script>
