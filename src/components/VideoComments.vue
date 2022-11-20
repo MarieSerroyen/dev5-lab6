@@ -10,6 +10,7 @@
             .then(response => response.json())
             .then(data => {
                 comments.data = data;
+                comments.data.reverse();
         });
     });
 
