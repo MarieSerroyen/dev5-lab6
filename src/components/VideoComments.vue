@@ -19,6 +19,10 @@
   <div class="comments">
     <b>{{user}}</b>
     <p>{{text}}</p>
+    <div>
+        <input type="text" placeholder="Add comment">
+        <button>ADD</button>
+    </div>
   </div>
 
 </template>
