@@ -1,24 +1,26 @@
 <script setup>
-    import {ref, onMounted} from 'vue'
+    import {ref, onMounted, reactive} from 'vue'
 
-    let user = ref("");
-    let text = ref("");
+    let comments = reactive({data: []});
 
     onMounted(() => {
         const apiUrl = "https://lab5-p379.onrender.com/api/v1/messages/";
         fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
-                user.value = data[0].user;
-                text.value = data[0].text;
+                comments.data = data;
         });
     })
 </script>
 
 <template>
   <div class="comments">
-    <b>{{user}}</b>
-    <p>{{text}}</p>
+    <ul>
+        <li v-for="comments in comments.data" :key="comments.id">
+            <p>{{comments.user}}</p>
+            <p>{{comments.text}}</p>
+        </li>
+    </ul>
     <div>
         <input type="text" placeholder="Add comment">
         <button>ADD</button>
@@ -30,5 +32,9 @@
 <style scoped>
     .comments {
         padding: 1rem;
+    }
+
+    li {
+        list-style: none;
     }
 </style>
