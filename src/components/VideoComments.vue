@@ -17,7 +17,7 @@
 <template>
   <div class="comments">
     <b>{{user}}</b>
-    <p>{{text}}</p>
+    <p class="text">{{text}}</p>
   </div>
 
 </template>
