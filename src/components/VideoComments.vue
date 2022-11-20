@@ -14,7 +14,24 @@
     });
 
     const addComment = () => {
-        console.log(comment.value);
+        //console.log(comment.value);
+        let data = {
+            user: "Marie",
+            text: comment.value
+        };
+        fetch("https://lab5-p379.onrender.com/api/v1/messages/", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json())
+            .then(data => {
+                comments.data.push(data);
+                comment.value = "";
+            });
+
     }
 </script>
 
