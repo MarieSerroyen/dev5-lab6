@@ -2,7 +2,7 @@
     import {ref, onMounted} from 'vue'
 
     let user = ref("");
-    let text = "test text";
+    let text = ref("");
 
     onMounted(() => {
         const apiUrl = "https://lab5-p379.onrender.com/api/v1/messages/";
@@ -10,6 +10,7 @@
             .then(response => response.json())
             .then(data => {
                 user.value = data[0].user;
+                text.value = data[0].text;
         });
     })
 </script>
@@ -17,7 +18,7 @@
 <template>
   <div class="comments">
     <b>{{user}}</b>
-    <p class="text">{{text}}</p>
+    <p>{{text}}</p>
   </div>
 
 </template>
