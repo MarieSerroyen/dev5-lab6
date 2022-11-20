@@ -21,12 +21,11 @@
             <p>{{comments.text}}</p>
         </li>
     </ul>
-    <div>
-        <input type="text" placeholder="Add comment">
-        <button>ADD</button>
-    </div>
   </div>
-
+  <div class="input-field">
+    <input type="text" placeholder="Add comment">
+    <button>ADD</button>
+  </div>
 </template>
 
 <style scoped>
@@ -40,5 +39,11 @@
 
     li {
         list-style: none;
+    }
+
+    .input-field {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem;
     }
 </style>
