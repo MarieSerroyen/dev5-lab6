@@ -1,10 +1,12 @@
 <script setup>
+    import {ref, onMounted} from 'vue'
 
+    let user = "Marie"
 </script>
 
 <template>
   <div class="comments">
-    <h1>Video Comments</h1>
+    <b>{{user}}</b>
   </div>
 
 </template>
