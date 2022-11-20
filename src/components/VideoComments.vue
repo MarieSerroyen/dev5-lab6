@@ -29,9 +29,13 @@
         })
             .then(response => response.json())
             .then(data => {
-                comments.data.push(data);
-                comment.value = "";
+                comments.data.push({
+                    user: comments.data.user,
+                    text: comments.data.text
+                });
             });
+            //clear input field
+            comment.value = "";
 
     }
 </script>
