@@ -7,8 +7,10 @@
 <template>
   <div class="app">
     <VideoPlayer/>
-    <VideoDetails/>
-    <VideoComments/>
+    <div class="info">
+      <VideoDetails/>
+      <VideoComments/>
+    </div>    
   </div>
 </template>
 
