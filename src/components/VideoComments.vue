@@ -17,7 +17,7 @@
   <div class="comments">
     <ul>
         <li v-for="comments in comments.data" :key="comments.id">
-            <p>{{comments.user}}</p>
+            <b>{{comments.user}}</b>
             <p>{{comments.text}}</p>
         </li>
     </ul>
@@ -31,7 +31,11 @@
 
 <style scoped>
     .comments {
-        padding: 1rem;
+        margin-left: 1rem;
+        width: 100;
+        height: 70vh;
+        overflow: scroll;
+        border: 1px solid blue;
     }
 
     li {
